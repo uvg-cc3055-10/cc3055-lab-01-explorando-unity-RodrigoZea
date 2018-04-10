@@ -36,7 +36,11 @@ public class BirdScript : MonoBehaviour {
         
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        dead = true;
+        if (collision.collider.gameObject.tag.Equals("Obstacle"))
+        {
+            dead = true;
+        }
+        
     }
 
 }
